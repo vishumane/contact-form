@@ -40,7 +40,7 @@ const Details = ({ users, onEdit, onDelete,loading }) => {
           ) : (
             <TableRow>
               <TableCell colSpan={4} align="center">
-                <CircularProgress /> {/* Show loader while fetching */}
+                <CircularProgress />
               </TableCell>
             </TableRow>
           )}

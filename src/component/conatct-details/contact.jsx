@@ -46,7 +46,6 @@ const Contact = () => {
   useEffect(() => {
     dispatch(fetchUsers())
       .then((unwrapResult) => {
-        console.log(unwrapResult, "test");
         setUsers(unwrapResult?.payload);
       })
       .catch((error) => {
@@ -111,7 +110,6 @@ const Contact = () => {
       if (editingUser) {
         dispatch(updateUser({ userId: editingUser.id, userData: formData }))
           .then(() => {
-            console.log("User updated successfully");
             handleClose();
             showSnackbar("User updated successfully", "success");
             setFormData({
@@ -134,7 +132,6 @@ const Contact = () => {
       } else {
         dispatch(createUser(formData))
           .then(() => {
-            console.log("User created successfully");
             handleClose();
             showSnackbar("User created successfully", "success");
             setFormData({
